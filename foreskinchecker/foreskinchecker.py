@@ -24,3 +24,9 @@ class checker(commands.Cog):
     async def red_delete_data_for_user(self, *, requester: RequestType, user_id: int) -> None:
         # TODO: Replace this with the proper end user data removal handling.
         super().red_delete_data_for_user(requester=requester, user_id=user_id)
+        
+    @commands.command()
+    async def mycom(self, ctx):
+        """This does stuff!"""
+        # Your code will go here
+        await ctx.send("I can do stuff!")
