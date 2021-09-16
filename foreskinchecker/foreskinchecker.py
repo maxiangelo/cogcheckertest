@@ -33,7 +33,8 @@ class checker(commands.Cog):
         "Mein geerther Skin sie schauen heute sehr gut aus!", 
         "Ohne Mütze schaust du scheiße aus", 
         "Käse ist lecker",
-        "Johannes ist auch ein noskin denke daran!!!"]
+        "Johannes ist auch ein noskin denke daran!!!",
+        "Sei kein Schwein lass den Foreskin in dein Herz rein"]
         # Your code will go here
         await ctx.send(random.choice(answers))
         await ctx.send(".gifr foreskin")
