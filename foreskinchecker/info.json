@@ -1,0 +1,21 @@
+{
+    "name": "checker",
+    "short": "checks if you have foreskin",
+    "description": "checks if you have foreskin",
+    "end_user_data_statement": "no",
+    "install_msg": "checking for those whomest do not have foreskin",
+    "author": [
+        "max"
+    ],
+    "required_cogs": {},
+    "requirements": [],
+    "tags": [
+        "tag1",
+        "tag2",
+        "tag3"
+    ],
+    "min_bot_version": "3.3.10",
+    "hidden": false,
+    "disabled": false,
+    "type": "COG"
+}
