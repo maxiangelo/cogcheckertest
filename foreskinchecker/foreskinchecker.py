@@ -1,6 +1,7 @@
 from typing import Literal
 
 import discord
+import random
 from redbot.core import commands
 from redbot.core.bot import Red
 from redbot.core.config import Config
@@ -24,9 +25,15 @@ class checker(commands.Cog):
     async def red_delete_data_for_user(self, *, requester: RequestType, user_id: int) -> None:
         # TODO: Replace this with the proper end user data removal handling.
         super().red_delete_data_for_user(requester=requester, user_id=user_id)
-        
+
     @commands.command()
-    async def mycom(self, ctx):
-        """This does stuff!"""
+    async def skin(self, ctx):
+        answers = ["Du dreckiger Noskin",
+        "Dein beschnittener Pimmel stinkt bis nach fucking Tokio", 
+        "Mein geerther Skin sie schauen heute sehr gut aus!", 
+        "Ohne Mütze schaust du scheiße aus", 
+        "Käse ist lecker",
+        "Johannes ist auch ein noskin denke daran!!!"]
         # Your code will go here
-        await ctx.send("I can do stuff!")
+        await ctx.send(random.choice(answers))
+        await ctx.send(".gifr foreskin")
