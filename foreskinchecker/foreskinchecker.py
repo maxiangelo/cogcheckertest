@@ -37,4 +37,3 @@ class checker(commands.Cog):
         "Sei kein Schwein lass den Foreskin in dein Herz rein"]
         # Your code will go here
         await ctx.send(random.choice(answers))
-        await ctx.send(".gifr foreskin")
