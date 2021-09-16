@@ -17,7 +17,7 @@ class checker(commands.Cog):
         self.bot = bot
         self.config = Config.get_conf(
             self,
-            identifier=foreskinchecker69,
+            identifier=887777595825983519,
             force_registration=True,
         )
 
