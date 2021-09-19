@@ -5,6 +5,7 @@ import random
 from redbot.core import commands
 from redbot.core.bot import Red
 from redbot.core.config import Config
+from influxdb import InfluxDBClient
 
 RequestType = Literal["discord_deleted_user", "owner", "user", "user_strict"]
 
@@ -37,3 +38,9 @@ class checker(commands.Cog):
         "Sei kein Schwein lass den Foreskin in dein Herz rein"]
         # Your code will go here
         await ctx.send(random.choice(answers))
+
+
+    @commands.command()
+    async def addSkinText(self, ctx, text):
+        # Your code will go here
+        await ctx.send(random.choice(text))
