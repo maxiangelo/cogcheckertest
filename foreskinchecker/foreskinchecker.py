@@ -41,5 +41,25 @@ class checker(commands.Cog):
 
     @commands.command()
     async def addskintext(self, ctx, text):
-        # Your code will go here
-        await ctx.send(text)
+        client = InfluxDBClient(host='192.168.178.78', port=8086, username='maxi', password='maxi1997',
+                                database="RedCogs")
+        json_body = [
+            {
+                "measurement": "noskinInsult",
+                "tags": {
+                    "type": "noskinInsult",
+                },
+                "fields": {
+                    "text": text
+                }
+            }
+        ]
+
+        response = ""
+
+        if client.write_points(json_body):
+            response = f"Worked, added {text} to the database"
+        else:
+            response = f"ERROR couldnt add {text} to the database"
+
+        await ctx.send(response)
