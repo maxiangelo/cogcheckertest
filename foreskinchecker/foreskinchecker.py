@@ -40,7 +40,8 @@ class checker(commands.Cog):
         await ctx.send(random.choice(answers))
 
     @commands.command()
-    async def addskintext(self, ctx, text):
+    async def addskintext(self, ctx, *, text: str):
+
         client = InfluxDBClient(host='192.168.178.78', port=8086, username='maxi', password='maxi1997',
                                 database="RedCogs")
         json_body = [
