@@ -5,6 +5,7 @@ import random
 from redbot.core import commands
 from redbot.core.bot import Red
 from redbot.core.config import Config
+from datetime import datetime
 from influxdb import InfluxDBClient
 
 RequestType = Literal["discord_deleted_user", "owner", "user", "user_strict"]
@@ -30,9 +31,10 @@ class checker(commands.Cog):
     @commands.command()
     async def skin(self, ctx):
 
+        random.seed(datetime.now())
+
         client = InfluxDBClient(host='192.168.178.78', port=8086, username='maxi', password='maxi1997',
                                 database="RedCogs")
-
         texts = []
         results = client.query('SELECT "text" FROM "RedCogs"."autogen"."noskinInsult"')
         for result in results:
