@@ -30,6 +30,9 @@ class checker(commands.Cog):
     @commands.command()
     async def skin(self, ctx):
 
+        client = InfluxDBClient(host='192.168.178.78', port=8086, username='maxi', password='maxi1997',
+                                database="RedCogs")
+
         texts = []
         results = client.query('SELECT "text" FROM "RedCogs"."autogen"."noskinInsult"')
         for result in results:
