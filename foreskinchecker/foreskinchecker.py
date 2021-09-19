@@ -30,17 +30,16 @@ class checker(commands.Cog):
     @commands.command()
     async def skin(self, ctx):
         answers = ["Du dreckiger Noskin",
-        "Dein beschnittener Pimmel stinkt bis nach fucking Tokio", 
-        "Mein geerther Skin sie schauen heute sehr gut aus!", 
-        "Ohne Mütze schaust du scheiße aus", 
-        "Käse ist lecker",
-        "Johannes ist auch ein noskin denke daran!!!",
-        "Sei kein Schwein lass den Foreskin in dein Herz rein"]
+                   "Dein beschnittener Pimmel stinkt bis nach fucking Tokio",
+                   "Mein geerther Skin sie schauen heute sehr gut aus!",
+                   "Ohne Mütze schaust du scheiße aus",
+                   "Käse ist lecker",
+                   "Johannes ist auch ein noskin denke daran!!!",
+                   "Sei kein Schwein lass den Foreskin in dein Herz rein"]
         # Your code will go here
         await ctx.send(random.choice(answers))
 
-
     @commands.command()
-    async def addSkinText(self, ctx, text):
+    async def addskintext(self, ctx, text):
         # Your code will go here
-        await ctx.send(random.choice(text))
+        await ctx.send(text)
